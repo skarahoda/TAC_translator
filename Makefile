@@ -8,7 +8,10 @@ translator.o : translator/translator.c translator/translator.h
 	mkdir -p depends
 	gcc -c translator/translator.c -o depends/translator.o
 pl4: translator_lex.yy.c translator_parser.tab.c translator.o
-	gcc -o pl4 depends/translator_lex.yy.c depends/translator_parser.tab.c depends/translator.o -lfl 
+	gcc -o pl4 depends/translator_lex.yy.c depends/translator_parser.tab.c depends/translator.o -lfl
+all: pl4
+	$(info ==============================================================)
+	$(info Done for all programs.)
 clean:
 	rm -rf *~ pl4 depends
 
