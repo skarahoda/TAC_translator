@@ -10,7 +10,7 @@ char * newtemp()
 {
 	char * t;
 	t = (char *) malloc(sizeof(char)*64);
-	sprintf(t,"temp_%d",next_temp);
+	sprintf(t,"t_%d",next_temp);
 	next_temp++;
 	return t;
 }

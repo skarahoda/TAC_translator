@@ -1,21 +1,21 @@
 	a = 3
 	b = 5
-	temp_0 = 2 and 1
-	temp_1 = 3 * temp_0
-	temp_2 = 10 + temp_1
-	c = temp_2
+	t_0 = 2 and 1
+	t_1 = 3 * t_0
+	t_2 = 10 + t_1
+	c = t_2
 	d = 2
 	x = 1
-	temp_3 = x + y
-	if ( temp_3 ) GOTO L0
+	t_3 = x + y
+	if ( t_3 ) GOTO L0
 	b = x
-	temp_5 = false and true
-	c = temp_5
+	t_5 = false and true
+	c = t_5
 	GOTO L1
-L0:	temp_4 = 1 + 1
-	a = temp_4
-L1:L4:	temp_6 = onur and biricik
-	if ( temp_6 ) GOTO L5
+L0:	t_4 = 1 + 1
+	a = t_4
+L1:L4:	t_6 = onur and biricik
+	if ( t_6 ) GOTO L5
 	GOTO L6
 L5:	if ( 5 ) GOTO L2
 	onur = 7
