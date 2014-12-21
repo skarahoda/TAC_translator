@@ -27,3 +27,9 @@
 *.i*86
 *.x86_64
 *.hex
+
+#output of my project
+pl4
+depends/*
+depends
+*~
