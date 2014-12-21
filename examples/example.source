@@ -1,0 +1,27 @@
+begin
+a = 3;
+b = 5;
+c = (10) + 3  * 2 and 1;
+d = 2;
+x = 1;
+if ( x + y ) then
+begin
+	a = 1 + 1;
+end
+else
+begin
+	b = x;
+	c = false and true;
+end
+while ( onur and biricik )
+begin
+	if ( 5 ) then
+	begin
+		onur = 6;
+	end
+	else
+	begin
+		onur = 7;
+	end
+end
+end
