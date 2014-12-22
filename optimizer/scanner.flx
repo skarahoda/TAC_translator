@@ -1,0 +1,25 @@
+%{
+#include "optimizer_parser.tab.h"	//get tokens fr/*om bison
+#include <string.h>
+#include <stdio.h>
+%}
+%%
+"false"			{ return tFALSE;				}
+"true"			{ return tTRUE;					}
+"if"			{ return tIF;					}
+"GOTO"			{ return tGOTO;					}
+":"			{ return tCOLON;				}
+"="			{ return tASSIGN;				}
+"("			{ return tLPAREN;				}
+")"			{ return tRPAREN;				}
+"+"			{ return tPLUS;					}
+"*"			{ return tSTAR;					}
+"<"			{ return tLESS;					}
+"=="			{ return tEQ;					}
+"and"			{ return tAND;					}
+[0-9]+			{ yylval.string = strdup(yytext);	return tINTNUM;	}
+"t_"[0-9]+		{ yylval.string = strdup(yytext);	return tID;	}
+[A-Za-z][A-Za-z0-9]*	{ yylval.string = strdup(yytext);	return tID;	}
+[ \t\r\n]		/*skip whitespace*/
+.			{ printf("Unknown character: \"%c\"\n",yytext[0]);	} /*print error and skip the errorneous character*/
+

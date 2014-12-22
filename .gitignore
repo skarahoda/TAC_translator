@@ -30,6 +30,7 @@
 
 #output of my project
 pl4
+tacopt
 depends/*
 depends
 *~

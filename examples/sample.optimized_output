@@ -1,0 +1,22 @@
+	a = 3
+	b = 5
+	t_0 = 2 and 1
+	t_0 = 3 * t_0
+	c = 10 + t_0
+	d = 2
+	x = 1
+	t_0 = x + y
+	if ( t_0 ) GOTO L0
+	b = x
+	c = false and true
+	GOTO L1
+L0:	a = 1 + 1
+L1:L4:	t_0 = onur and biricik
+	if ( t_0 ) GOTO L5
+	GOTO L6
+L5:	if ( 5 ) GOTO L2
+	onur = 7
+	GOTO L3
+L2:	onur = 6
+L3:	GOTO L4
+L6:
