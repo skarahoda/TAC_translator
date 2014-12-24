@@ -76,9 +76,9 @@ char *gen_if(char* expr_code, char* expr, char* if_statements, char* else_statem
 	result = concat(result, gen_cond_goto(label1,expr));
 	result = concat(result,else_statements);
 	result = concat(result,gen_goto(label2));
-	result = concat(result,concat(label1,":"));
+	result = concat(result,concat(label1,":\n"));
 	result = concat(result,if_statements);
-	result = concat(result,concat(label2,":"));
+	result = concat(result,concat(label2,":\n"));
 	return result;
 }
 
@@ -89,16 +89,16 @@ char *gen_while(char* expr_code, char* expr, char* statements)
 	char * label2 = newlabel();
 	char * label3 = newlabel();
 	result = (char *)malloc((strlen(label1) +1)* (sizeof(char)));
-	sprintf(result,"%s:",label1);
+	sprintf(result,"%s:\n",label1);
 	result = concat(result, expr_code);
 	result = concat(result,gen_cond_goto(label2,expr));
 	result = concat(result,gen_goto(label3));
 	result = concat(result,label2);
-	result = concat(result,":");
+	result = concat(result,":\n");
 	result = concat(result,statements);
 	result = concat(result, gen_goto(label1));
 	result = concat(result,label3);
-	result = concat(result,":");
+	result = concat(result,":\n");
 	return result;
 }
 
