@@ -36,7 +36,7 @@ Stmt:		  AssgnStmt
 AssgnStmt:	  tID tASSIGN Operand				{ optimize_assignment1(out,$1,$3);	}
 		| tID tASSIGN Operand Op Operand		{ optimize_assignmemt2(out,$1,$3,$4,$5);}
 IfStmt:		  tIF tLPAREN Operand tRPAREN tGOTO tID		{ print_if(out,$3,$6);			}
-LblStmt:	  tID tCOLON					{ fprintf(out,"%s:",$1);		}
+LblStmt:	  tID tCOLON					{ fprintf(out,"%s:\n",$1);		}
 GotoStmt:	  tGOTO tID					{ fprintf(out,"\tGOTO %s\n",$2);	}
 Operand:	  tINTNUM					{ $$ = strdup($1);			}
 		| tID						{ $$ = strdup($1);			}
